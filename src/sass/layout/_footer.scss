@@ -1,0 +1,142 @@
+@use '../abstracts';
+@use '../base';
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+    .main-link {
+        font-weight: 700;
+        font-size: 2rem;
+        display: flex;
+        
+    }
+
+
+    svg {
+        transition: transform .3s;
+    }
+	a {
+		color: abstracts.$color-white;
+		text-decoration: none;
+        transition: color .3s;
+
+        &:hover {
+            color: abstracts.$primary-color-80;
+
+            svg {
+                transform: scale(1.2);
+            }
+        }
+
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+	}
+
+	&__top {
+		padding: 1.9rem 2rem;
+		background-color: abstracts.$primary-color-11;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2.5rem;
+
+		a,
+		p {
+			font-size: 1.6rem;
+			font-weight: 700;
+		}
+	}
+
+	&__nav {
+		padding: 2.2rem 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2.5rem;
+		font-size: 1.6rem;
+
+		&-logo {
+
+			img {
+				margin-right: 0.8rem;
+				width: 2.5rem;
+				height: 2.5rem;
+			}
+		}
+
+		&-contact {
+			svg {
+				width: 2.5rem;
+				height: 2.5rem;
+                transition: color .3s;
+			}
+
+            a{
+                display: flex;
+                gap: 1rem;
+            }
+		}
+
+        .icons {
+            width: 50%;
+            display: flex;
+            gap: 3rem;
+            justify-content: space-between;
+
+            use {
+                fill: abstracts.$primary-color-80;
+            }
+        }
+	}
+}
+
+
+@media screen and (min-width:768px) {
+    .footer {
+        gap: 3rem;
+    
+        .main-link {
+            font-size: 2.2rem;
+        }
+    
+        &__box {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+        }
+    
+        &__top {
+            padding: 2rem 2rem;
+            gap: 2.7rem;
+        }
+    
+        &__nav {
+            padding: base.$section-padding-medium;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 2.9rem;
+        }
+    }
+    
+}
+
+@media screen and (min-width:992px) {
+    .footer {
+
+
+    
+        &__box {
+            gap: 2rem;
+        }
+
+        &__nav {
+            padding: 3rem 2.5rem 4rem 2.5rem;
+        }
+    }
+    
+}

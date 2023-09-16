@@ -1,0 +1,23 @@
+@use '../abstracts';
+
+
+$section-padding-small: 2rem 2.2em;
+$section-padding-medium: 3rem 2.5em;
+$section-padding-large: 4rem 7em;
+
+.section-padding-small {
+    padding: 2rem 2.2rem;
+}
+
+.subheadline {
+    font-size: abstracts.$subheadline-mobile;
+}
+
+.display-none {
+    display: none;
+}
+
+.hidden  {
+    opacity: 0;
+    visibility: hidden;
+}

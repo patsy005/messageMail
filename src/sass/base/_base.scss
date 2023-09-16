@@ -1,0 +1,27 @@
+@use '../abstracts';
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: abstracts.$primary-color-7;
+	color: abstracts.$color-white;
+	position: relative;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+

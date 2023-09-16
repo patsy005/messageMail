@@ -1,0 +1,95 @@
+@use '../base';
+
+.section__peek {
+	background: linear-gradient(
+			180deg,
+			#000308 3.23%,
+			rgba(0, 4, 10, 0.96) 27.92%,
+			rgba(0, 4, 10, 0.94) 60.18%,
+			#000308 79.84%,
+			#000308 99.5%
+		),
+		url('/src/img/about-sm.jpg'), lightgray -61.66px -7.511px / 324.227% 117.311% no-repeat;
+	background-size: cover;
+	background-position: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-bottom: 3rem;
+
+	svg {
+		height: 6.4rem;
+		width: 6.4rem;
+	}
+
+	.dm-window {
+		text-align: center;
+		width: 80%;
+		height: 80%;
+		content: url('/src/img/DM-window-mobile.png');
+	}
+
+	&-box {
+		padding: base.$section-padding-small;
+		gap: 3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.subheadline,
+	svg,
+	img {
+		margin-bottom: 3rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.section__peek {
+		margin-bottom: 5rem;
+		padding: base.$section-padding-medium;
+
+		.subheadline {
+			font-size: 4.8rem;
+		}
+		.dm-window {
+            width: 70%;
+			content: url('/src/img/DM\ Window-md.png');
+		}
+
+		&-box {
+			padding: base.$section-padding-medium;
+			gap: 3.3rem;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.section__peek {
+		margin-bottom: 5rem;
+		padding: base.$section-padding-large;
+
+        svg{
+            transform: rotate(-90deg);
+        }
+
+		.subheadline {
+			font-size: 4.8rem;
+            width: 17%;
+		}
+		.dm-window {
+            width: 40%;
+		}
+
+		&-box {
+            padding: 0;
+			gap: 2.5rem;
+            flex-direction: row;
+            justify-content: space-between;
+		}
+	}
+}
+
+

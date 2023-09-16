@@ -1,0 +1,94 @@
+@use '../abstracts';
+@use '../base';
+
+
+.header {
+	margin-bottom: 3rem;
+	height: 40vh;
+    position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	.headline-primary {
+		font-size: abstracts.$headline-primary-mobile;
+	}
+
+	.primary-subheadline {
+		font-weight: 400;
+		font-size: 1.6rem;
+	}
+
+	&__text {
+		padding: 0 2.2rem;
+		width: 65%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		height: 100%;
+		gap: 3.6rem;
+		z-index: 10;
+	}
+	&__img {
+        position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		width: 35vw;
+		// height: 43vh;
+		height: 100%;
+		object-fit: cover;
+		aspect-ratio: 1;
+		// display: none;
+		z-index: 10;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.header {
+		margin-bottom: 4rem;
+
+	
+		.headline-primary {
+			font-size: abstracts.$headline-primary-tablet;
+		}
+	
+		.primary-subheadline {
+			font-size: 2.3rem;
+		}
+	
+		&__text {
+			padding: 0 2.5rem;
+			gap: 4rem;
+
+		}
+	}
+	
+}
+
+@media screen and (min-width: 992px) {
+	.header {
+		height: 50vh;
+		margin-bottom: 5rem;
+		padding: base.$section-padding-large;
+	
+		.headline-primary {
+			font-size: abstracts.$headline-primary;
+		}
+	
+		.primary-subheadline {
+			font-weight: 400;
+			font-size: 2rem;
+		}
+	
+		&__text {
+			padding: 0 2.2rem;
+			padding: 0;
+			// padding: base.$section-padding-large;
+		}
+	}
+	
+}
