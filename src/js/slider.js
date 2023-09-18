@@ -8,6 +8,7 @@ class Slider {
 
 	_currentSlide = 0
 	_maxSlide = this._slides.length
+    _time = null
 
 	constructor() {
 		this._btnNext.addEventListener('click', this.nextSlide.bind(this))
@@ -15,10 +16,16 @@ class Slider {
 		this.setSlide(this._currentSlide)
 		this.createDots()
 		this.dotActivation(this._currentSlide)
+        document.addEventListener('keydown', this.keydownHandler.bind(this))
 	}
 
 	setSlide(slide) {
 		this._slides.forEach((s, index) => (s.style.transform = `translateX(${100 * (index - slide)}%)`))
+        clearTimeout(this._time)
+        this._time =setTimeout(() => {
+            this.nextSlide()
+            console.log(this._time)
+        }, 6000);
 	}
 
 	nextSlide() {
@@ -68,6 +75,11 @@ class Slider {
             this.setSlide(slide)
             this.dotActivation(slide)
         }
+    }
+
+    keydownHandler(e){
+        e.key === 'ArrowLeft' && this.prevSlide()
+        e.key === 'ArrowRight' && this.nextSlide()
     }
 
 
