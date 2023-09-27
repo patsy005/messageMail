@@ -8,12 +8,12 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;700&display=swap" rel="stylesheet" />
-		<script src="/src/js/form.js" type="module" defer></script>
-		<script src="/src/js/main.js" type="module" defer></script>
 		<link rel="stylesheet" href="/src/sass/main.scss" />
 		<link rel="stylesheet" href="/src/sass/contact.scss" />
-		<!-- <link rel="stylesheet" href="/css/main.css">
-		<link rel="stylesheet" href="/css/contact.css"> -->
+		<script src="/src/js/form.js" type="module" defer></script>
+		<script src="/src/js/main.js" type="module" defer></script>
+		<!-- <link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/contact.css" /> -->
 	</head>
 	<body>
 		<div class="nav__buttons">
@@ -92,25 +92,23 @@
 						<form action="POST" class="form">
 							<div class="form__box">
 								<label for="name">Name</label>
-								<input type="text" id="name" name="name" placeholder="Name schould have min. 2 characters" required />
+								<input type="text" id="name" name="name" placeholder="Your name" />
 								<p class="err-msg"></p>
 							</div>
 
 							<div class="form__box">
 								<label for="email">Email Address</label>
-								<input type="text" id="email" name="email" placeholder="Your email" required />
+								<input type="text" id="email" name="email" placeholder="Your email" />
 								<p class="err-msg"></p>
 							</div>
 
 							<div class="form__box">
 								<label for="password">Password</label>
-								<input
-									type="password"
-									id="password"
-									name="password"
-									placeholder="Password requires min.8 letters and at least 1 symbol, uppercase letter and number"
-									required />
+								<input type="password" id="password" name="password" placeholder="Password" />
 								<p class="err-msg"></p>
+								<p class="placeholder">
+									Password requires min.8 letters and at least 1 symbol, uppercase letter and number
+								</p>
 							</div>
 
 							<button class="btn btn-cta"><a href="#">Next</a></button>

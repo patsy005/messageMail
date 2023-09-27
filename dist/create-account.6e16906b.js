@@ -99,6 +99,6 @@ t.exports=/(?:ipad|iphone|ipod).*applewebkit/i.test(r)}),o.register("5sfID",func
 r({global:!0,bind:!0,enumerable:!0,forced:n.setImmediate!==c},{setImmediate:c})}),o.register("kHdVR",function(t,e){var r,n=o("7mb70"),i=o("5dW2a"),u=o("9GTLg"),c=o("datYX"),a=o("6hv4b"),s=o("BsNAl"),f=o("aM51J"),p=n.Function,l=/MSIE .\./.test(a)||c&&((r=n.Bun.version.split(".")).length<3||"0"===r[0]&&(r[1]<3||"3"===r[1]&&"0"===r[2]));// IE9- / Bun 0.3.0- setTimeout / setInterval / setImmediate additional parameters fix
 // https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#timers
 // https://github.com/oven-sh/bun/issues/1633
-t.exports=function(t,e){var r=e?2:1;return l?function(n,o/* , ...arguments */){var c=f(arguments.length,1)>r,a=u(n)?n:p(n),l=c?s(arguments,r):[],g=c?function(){i(a,this,l)}:a;return e?t(g,o):t(g)}:t}}),o.register("datYX",function(t,e){/* global Bun -- Deno case */t.exports="function"==typeof Bun&&Bun&&"string"==typeof Bun.version});//# sourceMappingURL=create-account.20ac6427.js.map
+t.exports=function(t,e){var r=e?2:1;return l?function(n,o/* , ...arguments */){var c=f(arguments.length,1)>r,a=u(n)?n:p(n),l=c?s(arguments,r):[],g=c?function(){i(a,this,l)}:a;return e?t(g,o):t(g)}:t}}),o.register("datYX",function(t,e){/* global Bun -- Deno case */t.exports="function"==typeof Bun&&Bun&&"string"==typeof Bun.version});//# sourceMappingURL=create-account.6e16906b.js.map
 
-//# sourceMappingURL=create-account.20ac6427.js.map
+//# sourceMappingURL=create-account.6e16906b.js.map

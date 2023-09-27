@@ -58,10 +58,14 @@ class Form {
 		const passwordRegex = new RegExp(/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/)
 		const passwordIsValid = passwordRegex.test(obj.password)
 
+		const passwordPlaceholder = input.nextElementSibling.nextElementSibling
+
 		if (!passwordIsValid && input.id === key) {
 			this.addError(key, input)
+			passwordPlaceholder.classList.add('display-none')
 		} else {
 			this.removeError(input)
+			passwordPlaceholder.classList.remove('display-none')
 		}
 		return passwordIsValid
 	}
@@ -85,7 +89,7 @@ class Form {
 		input.classList.add('error-input')
 	}
 
-	removeError(input){
+	removeError(input) {
 		input.nextElementSibling.textContent = ''
 		input.classList.remove('error-input')
 	}
@@ -96,14 +100,12 @@ class Form {
 		const formData = [...new FormData(this._form)]
 		const formObj = Object.fromEntries(formData)
 
-
-		for(const key in formObj) {
+		for (const key in formObj) {
 			const input = this.inputCheck(key)
 			const nameIsValid = this.nameIsValid(this._NAME, formObj)
 			const passwordIsValid = this.passwordIsValid(this._PASSWORD, formObj)
 			const emailIsValid = this.emailIsValid(this._EMAIL, formObj)
-	
-	
+
 			if (emailIsValid && nameIsValid && passwordIsValid) {
 				const errMsgs = document.querySelectorAll('.err-msg')
 				errMsgs.forEach(err => (err.textContent = ''))
@@ -111,7 +113,7 @@ class Form {
 					input.value = ''
 				})
 				input.classList.remove('error-input')
-	
+
 				this.toggleOverlay()
 			}
 		}

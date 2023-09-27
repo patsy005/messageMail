@@ -57,12 +57,16 @@
 			position: absolute;
 			content: '';
 			top: -7rem;
-			right: -5.5rem;
+			right: -7rem;
 		}
 
 		.btn {
-			width: 40%;
+			width: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			align-self: end;
+			text-align: center;
 		}
 	}
 }
